@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>QuickChef</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+<!-- Links for Jquery and bootstrap css -->
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script>
+<!-- jqurey script -->
+$(document).ready(function(){
+
+	$('#myCarousel').carousel({
+  interval: 3000
+})
+
+$('.carousel .item').each(function(){
+  var next = $(this).next();
+  if (!next.length) {
+    next = $(this).siblings(':first');
+  }
+  next.children(':first-child').clone().appendTo($(this));
+});
+});
+</script>
+<script type="text/javascript" src="javascript.js"></script>
+<style>
+* {
+		box-sizing : unset;
+	}
+	
+.col-md-6{
+		width : 45% ! important;
+	}
+</style>	
+
+
+
+</head>
+<body onload="init()" style='margin: 0px !important; padding: 0 !important;	background: linear-gradient(to bottom, #ff9933 0%, #ff99cc 100%);/*background-image: url(/image/site/food.gif) !important;*//*background: #dedcdc !important;*/	font-family: Georgia, "Times New Roman", Times, serif;	font-size: 12px !important;	'>
+<!--<body>
+		<div class="banner">
+			<video autoplay muted loop>
+				<source src="video.mp4" type="video/mp4">
+			</video>
+			<div class="content">
+				<h1>Restautant banner</h1>
+			</div>
+		</div>
+	</body>	-->
+	<!-- Start #logo top content of the webpage-->
+	<div id="logo">
+		<table style="float: left">
+			<tr>
+				<!--<td style="valign: top;"><img src="images/site/fd.png" alt=""
+					style="height: 80px" /></td>-->
+				<td><h1>
+						<a href="#"><img src="images/site/logo2.png" alt=""
+					style="height: 100px" /></a>
+					<!--<img src="images/site/logo2.png" alt="" style="width:25%; height: 100px">-->
+						<!--<a href="#">Quick Chef</a>-->
+					</h1></td>
+			</tr>
+			<!--<tr>
+				<td></td>
+				<td><p>
+						<em>World's Largest Online Games Center</em>
+					</p></td>
+			</tr>-->
+		</table>
+		<div
+			style="float: right; width: 25%; margin-top: 05px;  padding: 18px; padding-right: 15px">
+			<em style="color: white;">Search Restuarants:</em>
+			<div name="autofillform">
+				<input type="text" name="searchId" value="" class="input"
+					id="searchId" onkeyup="doCompletion()" 
+					placeholder="search Restautant name here..." style="padding: 05px; font-size: 16px;" />
+				<div id="auto-row">
+					<table id="complete-table" class="gridtable"
+						style="position: absolute; width: 315px;"></table>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<hr />
+	<!-- end #logo -->
+	<!-- start #header -->
+	<!-- menu in header area the header div ends in utility file where header content right side link gets populated with login id cart and logout option -->
+	<div id="header">
+		<div id="menu">
+			<ul>
+				
+				<li><a href="Home" class="first"><span class="glyphicon glyphicon-home">Home</span></a></li>
+				<li><a href="Search"><span class="glyphicon">Search</span></a></li>
+				
+			</ul>
+		</div>
+		<!-- end #menu -->
+		
+				
